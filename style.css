@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@100&family=Bungee+Shade&family=Cairo:wght@300;400&family=Comfortaa&family=Karla&family=Montserrat:wght@100;600&family=Nunito:wght@300;400&family=Open+Sans:wght@300&family=Oswald&family=Spartan:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #c75533;
+  --border-radius: 7px;
+
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  background-image: url(radiant-gradient.svg);
+  font-family: Karla, sans-serif ;
+}
+
+.title h1 {
+  color: white;
+  padding: 20px;
+  background: rgba(239, 105, 60, 0.5);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 275px;
+  margin: 20px auto 10px;
+  user-select: none;
+  text-align: center;
+  box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid #ffffff;
+}
+
+h1:hover{
+  background: rgba(198, 54, 54, 0.5);
+
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.item {
+  color: white;
+  padding: 20px;
+  background: rgba(142, 85, 20, 0.5);
+  border-radius: var(--border-radius);
+  margin: 10px;
+  box-shadow: 0 10px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.item:hover {
+  background: rgba(0,0,0, 0.8);
+}
+
+a{
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover,
+a:active{
+  text-decoration: underline;
+}
+
+.fa-times {
+  float: right;
+  cursor: pointer;
+  z-index: 2;
+}
+
+name{
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.name img {
+  height: 20px;
+  width: 20px;
+vertical-align:sub ;
+  margin-right: 5px;
+}
+
+.modal-container {
+background: rgba(0, 0, 0, 0.6);
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+
+
+}
+
+.show-modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.modal {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.8);
+  max-width: 95%;
+  width: 500px;
+  animation: modalopen 2s;
+  border-radius: var(--border-radius);
+
+}
+
+.close-icon {
+  float: right;
+  color: antiquewhite;
+  font-size: 24px;
+  position:relative;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: cornsilk;
+  padding: 15px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.modal-content {
+  padding: 20px;
+  background: whitesmoke;
+}
+
+
+
+@keyframes modalopen {
+from{
+  opacity: 0;
+}
+to{
+  opacity: 1;
+}
+
+}
+
+.form-group {
+  height: 55px;
+}
+
+.form-input {
+  width: 97%;
+  padding: 5px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+display: block;
+outline: none;
+}
+
+.form-label {
+  color: var(--primary-color);
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background: var(--primary-color);
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: var(--border-radius);
+  margin-top: 10px;
+}
+button:hover {
+  filter: brightness(110%);
+}
+
+button:focus {
+  outline: none;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
